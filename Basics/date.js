@@ -3,3 +3,11 @@ const Datee = new Date();// when you want to work with dates/times programmatica
 
 console.log(Dater);
 console.log(Datee);
+
+
+
+console.log(Datee.toDateString());
+console.log(Datee.toTimeString());
+console.log(Datee.toJSON());
+
+
