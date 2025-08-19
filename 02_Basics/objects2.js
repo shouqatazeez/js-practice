@@ -30,3 +30,17 @@ const userdetails = {// this is how the we declare object in object
 console.log(userdetails)
 console.log(userdetails.fullname.firstname.value);
 
+const value = {
+    1:"congrats",
+    2:"fo your wonderful efforts"
+}
+
+const value1 ={
+    3:"you have made it",
+    4:"you are amazing"
+}
+const spreadobjects = {...value,...value1}//spread is the best way insted of the assign when compared
+console.log(spreadobjects);
+
+const combineobject = Object.assign({},value,value1)// here {} considered as the target and val,val1 as the source
+console.log(combineobject);
