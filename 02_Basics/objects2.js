@@ -11,5 +11,22 @@ const user2 = {//this is an example of the singleton object and it is the best a
     age:21,
     village:"pedapudi"
 }
+
 console.log(user2["name"]);
+
+
+
+const userdetails = {// this is how the we declare object in object
+    fullname: {
+        value: "Mohammad Shouqat Azeez",
+        firstname: {
+            value: "Shouqat Azeez",
+            lastname: {
+                value: "Mohammad"
+            }
+        }
+    }
+};
+console.log(userdetails)
+console.log(userdetails.fullname.firstname.value);
 
