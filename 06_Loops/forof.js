@@ -9,7 +9,7 @@ for (const greet of greetings) {
     console.log(`The character in the greetings is ${greet}`);
 
 }
-
+//For Maps
 const num = new Map();
 num.set('IN', "India");
 num.set('UN', "United States of America");
