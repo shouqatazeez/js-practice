@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color: black;color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">friday</div>
+    </div>
+</body>
+<script>
+    // Select the parent <div> element with class 'parent'
+    const par = document.querySelector('.parent');
+
+    // Log the HTMLCollection of all child elements of 'par'
+    console.log(par.children);
+
+    // Log the first child (Monday)
+    console.log(par.children[0]);
+
+    // Log the text inside the first child (should be "Monday")
+    console.log(par.children[0].innerHTML);
+
+    // Loop through all children and log their inner text (each day)
+    for (let i = 0; i < par.children.length; i++) {
+        console.log(par.children[i].innerHTML);
+    }
+
+    // Log the first child element (same as par.children[0])
+    console.log(par.firstElementChild);
+
+
+    // Log the last child element (same as par.children[3])
+    console.log(par.lastElementChild);
+
+
+
+
+</script>
+
+</html>
