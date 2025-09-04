@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+
+// document.getElementById('owl').onclick =function(){ // this is how we use the alert but it is not the best approach better to use the eventlistner insted of this onclick it does not give all the information when compared to the eventlistner
+//     alert("owl clicked");
+// }
+
+
+//     document.getElementById('photoshop').addEventListener('click',function(e){ // this is the best approach when compared with "onclick" like upperone example
+
+//     console.log(e.timeStamp);
+//     console.log(e.type);
+
+//     },false)// here we use the false this method is called as the eventpropagation and the name here called as the evenbubbling 
+
+
+
+
+//Event Propagation is the process of the tracking the elements from the inner to outer elements is called as the event propagation 
+
+// document.getElementById('images').addEventListener('click',function(e){
+// console.log("the ui mode is viewing");
+
+// },false)// if we use the false the then it is called as the bubbling up from the  where as if we use bottom to up  the true then it is called as capturing that  comes from the top to bottom 
+
+
+// document.getElementById('owl').addEventListener('click',function(e){
+//     e.stopPropagation();// this method is used to stop the printing the log message that is present in the id value of the images it only print the owl log value i mean like owl clicked likewise
+//     console.log("owl clicked");
+    
+// },false)
+
+// document.getElementById('google').addEventListener('click',function(e){
+
+//     e.preventDefault();// this method is used to prevent form without opening the value 
+//     console.log("google clicked");
+//     e.stopPropagation();
+    
+    
+// },false)
+
+
+
+document.getElementById('images').addEventListener('click',function(e){
+    console.log(e);// by usint this it will give me the entire images details 
+        console.log(e.target)// by this it will give me the particular image details
+
+    
+console.log(e.target.parentNode);// here it will give only the parent tag that stored in the clicked image
+
+
+
+const removeelement = e.target.parentNode
+removeelement.remove();// this is the method how we remove the element on click
+
+
+},false)
+</script>
