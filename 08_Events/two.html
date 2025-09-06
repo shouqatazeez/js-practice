@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: rgba(0, 0, 0, 0.521); color:white;">
     <h1>Shouqat Azeez</h1>
+    <Button id="buttonbhai" >
+        Click Me to see the Wonder
+    </Button>
 </body>
 <script>
     console.log("Mohammad");
@@ -19,8 +22,24 @@
         
     }
 
-    setTimeout(name,2000)// this is type of method in which it wait for the 2 seconds then it will print the answer only once
+    const fullname = function(){
+document.querySelector('h1'). innerHTML= "Mohammd Shouqat Azeez"// by selecting this we are changing the h1 value  
+   
+    }
+
+    const value = function(){
+        document.querySelector('#buttonbhai').addEventListener('click',function(){
+            clearTimeout(changeme)
+            
+        })
+    }
+
+
+   const changeme = setTimeout(fullname,2000)// this is type of method in which it wait for the 2 seconds then it will print the answer only once
     setInterval(name,5000)//this is type of method in which it wait for the 5 seconds then it will print the answer continously for every 5 seconds
+ setInterval(name,4000)// it will change the value of the h1 after the 4 seconds in the main one 
+
+value()// this is type i mean we are consuming and stops  
 
 </script>
 </html>
